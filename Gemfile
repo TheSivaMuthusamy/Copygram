@@ -39,7 +39,8 @@ gem 'haml-rails'
 gem 'paperclip'
 gem 'simple_form'
 gem 'bootstrap-sass'
-
+gem 'devise'
+gem 'html2haml'
 group :development, :test do
   gem 'sqlite3', '1.3.12'
   gem 'byebug', platform: :mri
