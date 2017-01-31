@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  acts_as_votable
   validates :image, presence: true
   validates :user_id, presence: true
   validates :caption, length: { minimum: 3, maximum: 300 }

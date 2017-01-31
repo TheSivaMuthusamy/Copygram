@@ -14,12 +14,25 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- body {
+ html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+.alert {
+  margin-bottom: 0px;
+}
+
 /* ## NAVBAR CUSTOMISATIONS ## */
+
+.navbar {
+  margin-bottom: 0px;
+}
 
 .navbar-brand {
   a {
@@ -29,14 +42,13 @@
 
 .navbar-default {
   background-color: #fff;
-  height: 54px;
   .navbar-nav li a {
     color: #125688;
   }
 }
 
 .navbar-container {
-  width: 70%;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -91,7 +103,6 @@
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
     color: #125688;
     font-size: 15px;
   }
@@ -110,7 +121,6 @@
     }
   }
   margin-bottom: 7px;
-  padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 10px;
@@ -138,30 +148,27 @@
   justify-content: center;
 }
 
-/* ## Wrapper and styling for the new and edit views ## */
-
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
-}
+/* ## Wrapper and styling for the new, edit & devise views ## */
 
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
 }
 
-html {
-  height: 100%;
-}
-
 .registration-bg {
   padding-top: 4em;
   height: 100%;
-  background-image: image-url('475456.jpg');
+  background-image: image-url('regbackg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('loginbg.jpg');
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -185,36 +192,15 @@ html {
   }
 }
 
-.input-lg {
-  margin: 20px;
-}
-
-.navbar {
-  margin-bottom: 0px;
-}
-
-.alert {
-  margin-bottom: 0px;
-}
-
-.login-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: image-url('475456.jpg');
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 #image-preview {
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 #post_image {
   padding: 1em;
   margin: 0px auto;
 }
+
 
 #paginator {
   color: #4090DB;
@@ -251,8 +237,9 @@ html {
   }
 }
 
-#user_avatar {
-  margin: 20px auto;
+.comment-submit-button {
+  position: absolute;
+  left: -9999px;
 }
 
 .profile-header {
@@ -281,4 +268,28 @@ html {
 
 .profile-bio {
   margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
 }

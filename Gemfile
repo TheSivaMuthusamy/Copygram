@@ -43,6 +43,7 @@ gem 'devise'
 gem 'html2haml'
 gem 'kaminari'
 gem 'jquery-turbolinks'
+gem 'acts_as_votable'
 group :development, :test do
   gem 'sqlite3', '1.3.12'
   gem 'byebug', platform: :mri
