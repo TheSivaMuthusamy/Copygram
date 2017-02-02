@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   acts_as_votable
+  scope :of_followed_users, -> (following_users) { where user_id: following_users } 
   validates :image, presence: true
   validates :user_id, presence: true
   validates :caption, length: { minimum: 3, maximum: 300 }
