@@ -1,0 +1,3 @@
+$("#notification_<%= @notification.id %>").attr('class', 'notification-read-list-container');
+$("#notification_dropdown_<%= @notification.id %>").attr('class', 'notification-read-dropdown-container');
+$('#notification_link_<%= @notification.id %> > a').attr('href', '/notifications/<%= @notification.id %>/mark_unread');

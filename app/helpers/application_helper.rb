@@ -22,4 +22,17 @@ module ApplicationHelper
     image_tag 'default-avatar.jpg', id: 'image-preview',
                                     class: 'img-responsive img-circle profile-image'
   end
+
+  def thumb_avatar(user)
+    return image_tag user.avatar.url(:thumb),
+                     class: 'img-responsive img-circle notification-image' if user.avatar.exists?
+    image_tag 'default-avatar.jpg', class: 'img-responsive img-circle notification-image'
+  end
+
+  def small_avatar(user)
+    return image_tag user.avatar.url(:small),
+                     class: 'img-responsive img-circle notification-dropdown-image' if user.avatar.exists?
+    image_tag 'default-avatar.jpg', class: 'img-responsive img-circle notification-dropdown-image'
+  end
+
 end

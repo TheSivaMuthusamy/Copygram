@@ -53,6 +53,6 @@ class CommentsController < ApplicationController
                             subscribed_user_id: current_user.id,
                             post_id: post.id,
                             identifier: @comment.id,
-                            notice_type: 'comment')
+                            notice_type: 'commented')
     end
 end

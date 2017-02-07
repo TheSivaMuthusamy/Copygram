@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   def browse
     @posts = Post.all.order('created_at DESC').page params[:page]
   end
-  
+
   def show
   end
 
@@ -49,6 +49,7 @@ class PostsController < ApplicationController
 
   def like
     if @post.liked_by current_user
+      create_notification @post
       respond_to do |format|
         format.html { redirect_to :back }
         format.js
@@ -79,5 +80,14 @@ class PostsController < ApplicationController
       unless current_user == @post.user
         redirect_to root_path
       end
+    end
+
+    def create_notification(post)
+        return if post.user.id == current_user.id
+        Notification.create(user_id: post.user.id,
+                            subscribed_user_id: current_user.id,
+                            post_id: post.id,
+                            identifier: post.id,
+                            notice_type: 'liked')
     end
 end

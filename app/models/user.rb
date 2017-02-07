@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships, source: :follower
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
-  has_attached_file :avatar, styles: { medium: '152x152#' }
+  has_attached_file :avatar, styles: {small: '20X20#', thumb: '75x75#', medium: '152x152#' }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   def follow(user_id)

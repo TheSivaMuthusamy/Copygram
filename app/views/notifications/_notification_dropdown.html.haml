@@ -3,7 +3,9 @@
     = current_user.notifications.where(read: false).count
     %span.glyphicon.glyphicon-flag
   %ul.dropdown-menu{ 'aria-labelledby': 'dropdownMenu1' }
-    %li.dropdown-header.text-center Notifications
-    = render current_user.notifications.order('created_at DESC').where(read: false).last(5)
+    %li.dropdown-header
+      Notifications
+      = link_to 'Mark All Read', mark_read_all_path, method: :patch, remote: true
+    = render current_user.notifications.order('created_at DESC').first(5), selector:"short"
     %li.divider{ role: 'separator' }
       %li.text-center= link_to 'View All', notifications_path

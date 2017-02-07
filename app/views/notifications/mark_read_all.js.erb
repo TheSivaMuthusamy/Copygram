@@ -1,0 +1,7 @@
+$(".notification-unread-list-container").attr('class', 'notification-read-list-container');
+$(".notification-unread-dropdown-container").attr('class', 'notification-read-dropdown-container');
+$('a[href$="mark_read"]').each(function()
+   {
+      this.href = this.href.replace('mark_read',
+         'mark_unread');
+   });

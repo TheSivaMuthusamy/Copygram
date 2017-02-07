@@ -14,6 +14,9 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ $notification-image-height: 40px;
+ $notification-image-width: 40px;
+
  html {
   height: 100%;
 }
@@ -302,12 +305,36 @@ body {
 }
 
 .notification-index-list {
-  margin-top: 5em;
+  margin-top: 3em;
   list-style: none;
-  li {
-    margin-top: 1em;
-    background-color: white;
-    padding: 1em;
+  a{
+    color: black;
+    li {
+      margin-top: 1em;
+      line-height: $notification-image-height;
+      max-width: 515px;
+      min-width: 515px;
+      .notification-read-list-container {
+        background-color: white;
+        padding: .5em;
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+      .notification-unread-list-container {
+        background-color: #dfe3ee;
+        padding: .5em;
+        &:hover {
+          background-color: #8b9dc3;
+        }
+      }
+      .time-ago{
+        float: right;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -332,5 +359,94 @@ body {
     border-color: #47821F;
     background-color: #47821F;
     color: white;
+  }
+}
+
+
+.notification-image {
+  height: $notification-image-height;
+  width: $notification-image-width;
+  border: 1px solid black;
+  float: left;
+  margin-right: 1.6em;
+}
+
+
+.notifications-header {
+  margin-left: 40px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+  max-width: 515px;
+  overflow: hidden;;
+  line-height: 5;
+  h3 {
+    float: left;
+  }
+  a {
+    float: right;
+    &:visited, &:focus {
+      color: #337ab7;
+    }
+  }
+}
+
+.dropdown-menu {
+  width: 300px;
+  .dropdown-header {
+    a {
+      float: right;
+      line-height: .8;
+      color: #337ab7 !important;
+    }
+  }
+  .mark-read-glyph {
+    transform: translate(-10px, -33px);
+    float: right;
+    a {
+      &:hover {
+        color: #3b5998 !important;
+      }
+    }
+  }
+  a {
+    color: black !important;
+    font-size: 12px;
+    &:hover {
+      text-decoration: none;
+    }
+    .notification-read-dropdown-container {
+      padding: 7px;
+      border-top: 1px solid #e5e5e5;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+    .notification-unread-dropdown-container {
+      padding: 7px;
+      border-top: 1px solid #e5e5e5;
+      background-color: #dfe3ee;
+      &:hover {
+        background-color: #8b9dc3;
+      }
+    }
+  }
+  .divider {
+    margin: 0;
+  }
+}
+
+.glyphicon.glyphicon-unchecked {
+    float: right;
+    position: relative;
+    z-index: 3;
+    line-height: 38px;
+}
+
+.mark-read-glyph{
+  z-index: 5;
+  a {
+    &:hover {
+      color: #3b5998;
+    }
   }
 }
