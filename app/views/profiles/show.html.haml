@@ -27,7 +27,14 @@
       %p.profile-bio
         = @user.bio
       .user-statistics
-        %p
-          = pluralize @user.posts.count, 'post'
+        .post-stat
+          %p= number_to_human(@user.posts.count, format: '%n%u', precision: 2, units: { thousand: 'K', million: 'M', billion: 'B'})
+          %p= 'posts'
+        .folower-stat
+          %p= number_to_human(@user.followers.count, format: '%n%u', precision: 2, units: { thousand: 'K', million: 'M', billion: 'B'})
+          %p= 'followers'
+        .following-stat
+          %p= number_to_human(@user.following.count,  format: '%n%u', precision: 2, units: { thousand: 'K', million: 'M', billion: 'B'})
+          %p= 'following'
 -@posts.each do |post|
   = render 'posts/post', post: post

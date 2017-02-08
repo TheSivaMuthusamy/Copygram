@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :owned_post, only: [:edit, :update, :destroy]
   def index
-     @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]
+     @posts = Post.where("user_id IN (?) OR user_id = ?", current_user.following.ids, current_user.id).order('created_at DESC').page params[:page]
   end
 
   def browse

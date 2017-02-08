@@ -450,3 +450,22 @@ body {
     }
   }
 }
+
+#dropdownMenu1 {
+  p {
+    display: inline;
+  }
+}
+
+.user-statistics {
+  div {
+    display: inline-block;
+    margin-right: 20px;
+    p {
+      display: inline-block;
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
 $("#notification_<%= @notification.id %>").attr('class', 'notification-unread-list-container');
 $("#notification_dropdown_<%= @notification.id %>").attr('class', 'notification-unread-dropdown-container');
 $('#notification_link_<%= @notification.id %> > a').attr('href', '/notifications/<%= @notification.id %>/mark_read');
+$('#dropdownMenu1 > p').text(Number($('#dropdownMenu1 > p').text()) + 1);
