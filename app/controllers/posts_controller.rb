@@ -5,17 +5,16 @@ class PostsController < ApplicationController
   def index
      @posts = Post.where("user_id IN (?) OR user_id = ?", current_user.following.ids, current_user.id).order('created_at DESC').page params[:page]
      respond_to do |format|
-       format.html { render 'index' }
+      format.html { render 'index' }
       format.js   { render 'infinite_scroll_index' }
     end
   end
 
   def browse
     @posts = Post.all.order('created_at DESC').page params[:page]
-    @notification.update read: true
     respond_to do |format|
-      format.js
-      format.html
+      format.html 
+      format.js   { render 'infinite_scroll_index' }
     end
   end
 
