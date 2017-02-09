@@ -214,6 +214,7 @@ body {
   display: table;
   border: 2px solid #4090DB;
   border-radius: 50%;
+  display: none;
   :hover {
     border: 1px solid #2D6DA8;
     border-radius: 50%;
@@ -444,6 +445,7 @@ body {
 
 .mark-read-glyph{
   z-index: 5;
+  transform: translate(495px, -53px);
   a {
     &:hover {
       color: #3b5998;

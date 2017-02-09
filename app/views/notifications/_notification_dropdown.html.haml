@@ -6,6 +6,7 @@
     %li.dropdown-header
       Notifications
       = link_to 'Mark All Read', mark_read_all_path, method: :patch, remote: true
-    = render current_user.notifications.order('created_at DESC').first(5), selector:"short"
+    - current_user.notifications.order('created_at DESC').first(5).each do |notification|
+      = render '/notifications/notification_menu', notification: notification
     %li.divider{ role: 'separator' }
       %li.text-center= link_to 'View All', notifications_path

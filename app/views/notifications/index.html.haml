@@ -5,6 +5,6 @@
         %h3 Your Notifications
         = link_to 'Mark All Read', mark_read_all_path, method: :patch, remote: true
       %ul.notification-index-list
-        = render @notifications, selector: "long"
+        = render @notifications
       #paginator.text-center
         = link_to_next_page @notifications, 'LOAD MORE', remote: true, id: 'load_more'

@@ -1,17 +1,11 @@
 = link_to link_through_path(notification) do
   %li
     - if notification.read
-      .notification-read-list-container{id: "notification_#{notification.id}"}
-        = thumb_avatar(notification.subscribed_user)
+      .notification-read-dropdown-container{id: "notification_dropdown_#{notification.id}"}
         = "#{notification.subscribed_user.user_name} has #{notification.notice_type} on your post"
-        .time-ago
-          = time_ago_in_words(notification.created_at) + " ago"
     - else
-      .notification-unread-list-container{id: "notification_#{notification.id}"}
-        = thumb_avatar(notification.subscribed_user)
+      .notification-unread-dropdown-container{id: "notification_dropdown_#{notification.id}"}
         = "#{notification.subscribed_user.user_name} has #{notification.notice_type} on your post"
-        .time-ago
-          = time_ago_in_words(notification.created_at) + " ago"
 .mark-read-glyph{id: "notification_link_#{notification.id}"}
   -if notification.read
     = link_to mark_unread_path(notification), data: { confirm: "Mark notification as unread?" }, method: :patch, remote: true do
