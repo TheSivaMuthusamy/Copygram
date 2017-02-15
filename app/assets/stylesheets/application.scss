@@ -11,11 +11,13 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+
 
  $notification-image-height: 40px;
  $notification-image-width: 40px;
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  html {
   height: 100%;
@@ -308,6 +310,8 @@ body {
 .notification-index-list {
   margin-top: 3em;
   list-style: none;
+  max-width: 515px;
+  min-width: 515px;
   a{
     color: black;
     li {
@@ -445,7 +449,8 @@ body {
 
 .mark-read-glyph{
   z-index: 5;
-  transform: translate(495px, -53px);
+  transform: translate(30px, -53px);
+  float: right;
   a {
     &:hover {
       color: #3b5998;
@@ -474,4 +479,31 @@ body {
 
 .comment-submit-button {
   display: none;
+}
+
+.panel-body {
+  div {
+    margin-bottom: 16px;
+  }
+  .field_with_errors {
+    margin-bottom: 0px;
+  }
+}
+
+.container {
+  min-width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+
+.error {
+  color: #a94442;
+}
+
+.error_notification {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

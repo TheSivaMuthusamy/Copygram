@@ -1,24 +1,41 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Copygram
 
-Things you may want to cover:
+This app is an instagram clone to test my ability to create a functional rails
+app. Help was used from the devwalks tutorial on creating an instagram clones,
+especially in the css. Extra features were added such as the ability to mark all
+notifications read and individual notifications as read with AJAX. Also, an
+infinite scroll feature was added for the root and browse sections although it
+can be buggy. I hope to continually refactor and clean up the css as well as add more
+features so that it more resembles instagram.
 
-* Ruby version
+## Getting started
 
-* System dependencies
+To get started with the app, clone the repo and then install the needed gems:
 
-* Configuration
+```
+$ bundle install --without production
+```
 
-* Database creation
+Next, migrate the database:
 
-* Database initialization
+```
+$ rails db:migrate
+```
 
-* How to run the test suite
+Finally, run the test suite to verify that everything is working correctly:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rails test
+```
 
-* Deployment instructions
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* ...
+```
+$ rails server
+```
+
+Also, checkout a running implementation at [Copygram](https://shielded-plains-78697.herokuapp.com)
+using email "exampletes.org" and password "foobar". Alternatively, you can create
+your own account.

@@ -79,6 +79,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.17)
     formatador (0.2.5)
     globalid (0.3.7)
@@ -284,6 +286,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  faker
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
   haml
