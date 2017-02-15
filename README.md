@@ -4,7 +4,7 @@
 
 This app is an instagram clone to test my ability to create a functional rails
 app. Help was used from the devwalks tutorial on creating an instagram clones,
-especially in the css. Extra features were added such as the ability to mark all
+especially with the css, though I have added some of my own tricks. Extra features were added such as the ability to mark all
 notifications read and individual notifications as read with AJAX. Also, an
 infinite scroll feature was added for the root and browse sections although it
 can be buggy. I hope to continually refactor and clean up the css as well as add more
