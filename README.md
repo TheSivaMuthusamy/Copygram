@@ -37,5 +37,5 @@ $ rails server
 ```
 
 Also, checkout a running implementation at [Copygram](https://shielded-plains-78697.herokuapp.com)
-using email "exampletes.org" and password "foobar". Alternatively, you can create
+using email "example@test.org" and password "foobar". Alternatively, you can create
 your own account.
