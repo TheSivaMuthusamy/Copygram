@@ -1,7 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  caption: MyString
+Post1:
+  caption: Lorem Ipsum Test1
+  image_file_name: image1.jpeg
+  image_content_type: image/jpeg
+  user: Test1
 
-two:
-  caption: MyString
+Post2:
+  caption: Lorem Ipsum Test2
+  image_file_name: image2.jpeg
+  image_content_type: image/jpeg
+  user: Test2
+
+Post3:
+  caption: Lorem Ipsum Test3
+  image_file_name: image3.jpeg
+  image_content_type: image/jpeg
+  user: Test3

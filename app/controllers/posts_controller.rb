@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def browse
     @posts = Post.all.order('created_at DESC').page params[:page]
     respond_to do |format|
-      format.html 
+      format.html
       format.js   { render 'infinite_scroll_index' }
     end
   end
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       flash[:success] = "Post updated."
-      redirect_to posts_path
+      redirect_to @post
     else
       flash.now[:alert] = "Update failed.  Please check the form."
       render :edit
@@ -52,6 +52,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
+    flash[:success] = 'Your post has been deleted.'
     redirect_to posts_path
   end
 

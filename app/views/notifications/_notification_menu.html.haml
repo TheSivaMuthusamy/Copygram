@@ -8,8 +8,8 @@
         = "#{notification.subscribed_user.user_name} has #{notification.notice_type} on your post"
 .mark-read-glyph{id: "notification_link_#{notification.id}"}
   -if notification.read
-    = link_to mark_unread_path(notification), data: { confirm: "Mark notification as unread?" }, method: :patch, remote: true do
+    = link_to mark_unread_path(notification), data: { confirm: "Mark notification as unread?" }, id: 'mark_small', method: :patch, remote: true do
       %span(class="glyphicon glyphicon-envelope")
   -else
-    = link_to mark_read_path(notification), data: { confirm: "Mark notification as read?" }, method: :patch, remote: true do
+    = link_to mark_read_path(notification), data: { confirm: "Mark notification as read?" }, id: 'mark_small', method: :patch, remote: true do
       %span(class="glyphicon glyphicon-envelope")

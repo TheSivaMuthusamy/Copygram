@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  post: one
-  content: MyText
+  user: Test1
+  post: Post1
+  content: Lego
 
 two:
-  user: two
-  post: two
-  content: MyText
+  user: Test2
+  post: Post1
+  content: Can't Delete

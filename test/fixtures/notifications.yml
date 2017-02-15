@@ -5,7 +5,7 @@ one:
   subscribed_user: one
   post: one
   identifier: 1
-  type: 
+  notice_type: "liked"
   read: false
 
 two:
@@ -13,5 +13,5 @@ two:
   subscribed_user: two
   post: two
   identifier: 1
-  type: 
+  notice_type: "commented"
   read: false

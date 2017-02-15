@@ -4,8 +4,13 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  follower: Test1
+  following: Test2
+
 # column: value
 #
-two: {}
+two:
+  follower: Test2
+  following: Test1
 # column: value
